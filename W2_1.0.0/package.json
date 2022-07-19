@@ -1,0 +1,6 @@
+{
+    "name": "framework-arduinow2",
+    "description": "Integration of W2 microcontrollers with the Arduino framework",
+    "url": "",
+    "version": "1.0.0"
+}

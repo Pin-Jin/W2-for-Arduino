@@ -1,0 +1,75 @@
+# W2 platform
+# ------------------------------
+
+# The information about this Arduino compatible environment
+# ---------
+name=W2
+version=1.0.0
+
+# Build related core definitions
+# ---------
+build.core.path ={runtime.platform.path}/cores
+build.variant.path ={runtime.platform.path}/variants
+build.assembly_file ={build.variant.path}/entry4romload.s {build.variant.path}/isr.s {build.variant.path}/io.s
+
+# Toolchain binaries
+# ---------
+compiler.path={runtime.tools.mips-mti-elf.path}/bin/
+compiler.c.cmd=mips-mti-elf-gcc
+compiler.cpp.cmd=mips-mti-elf-g++
+compiler.size.cmd=mips-mti-elf-size
+compiler.S.cmd=mips-mti-elf-as
+compiler.c.elf.cmd = mips-mti-elf-ld
+
+compiler.support.path = -I{runtime.platform.path}/W2 -I{runtime.platform.path}/std -I{runtime.platform.path}/core
+
+# Toolchain definitions
+# ---------
+
+# Compiler definitions
+compiler.warning_flags=-w
+compiler.define=-DARDUINO=
+
+
+# GCC related definitions
+compiler.c.flags=-EL -DPRT_UART -msoft-float -march=mips1 -std=gnu99 -G 0 -c -Wa,-adhls
+
+compiler.c.elf.flags=-EL -eentry -s -N -Ttext 10000000 -Tdata 01000010 -M
+
+# G++ related definitions
+compiler.cpp.flags=-EL -DPRT_UART -msoft-float -march=mips1 -std=gnu99 -G 0 -c -Wa,-adhls
+
+# Assembler related definitions
+compiler.S.flags=-EL -msoft-float 
+
+# Compile patterns
+# ----------------
+
+## Compile C files
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} {compiler.support.path} {includes} "{source_file}" -o "{object_file}"
+
+## Compile C++ files
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} -DXMC{build.board.version}_{build.board.type} -D{build.board_variant} -DF_CPU={build.f_cpu} -DARDUINO={build.board.version} -DARDUINO_{build.board} -DARDUINO_ARCH_{build.arch} {compiler.cpp.extra_flags} {build.extra_flags} {build.menu_flags} {compiler.arm.cmsis.path} {compiler.avr_support.path} {compiler.usb.path} {includes} "{source_file}" -o "{object_file}"
+
+## Compile S files
+recipe.S.o.pattern="{compiler.path}{compiler.S.cmd}" {compiler.S.flags} {includes} "{source_file}" -o "{object_file}"
+
+# Linker patterns
+# ----------------
+
+## Combine gc-sections, archives, and objects
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}"  -o "{build.path}/{build.project_name}.bin" {object_files} "{build.path}/{archive_file}" -lm 
+
+# Create output files
+# ----------------
+
+## Create output (bin file)
+recipe.objcopy.bin.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags}"{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.hex"
+
+## Compute size
+# ----------------
+
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A --common "{build.path}/{build.project_name}.elf"
+recipe.size.regex=^(\.text|\.eh_frame)\s+([0-9]+).*
+# Recipe to show SRAM size used
+recipe.size.regex.data=^(?:\.data|\.VENEER_Code|\.ram_code|\.bss|\.no_init|\Stack)\s+([0-9]+).*

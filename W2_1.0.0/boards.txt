@@ -1,3 +1,37 @@
 ####################################################
 menu.UART=Serial Output Selection
 menu.LIB=Additional Libraries
+####################################################
+W2board.name=W2board
+W2board.upload.tool=xmcprog
+W2board.upload.speed=9600
+W2board.upload.resetmethod=ck
+W2board.upload.maximum_size=65536
+W2board.upload.wait_for_upload_port=true
+
+W2board.communication=usb
+W2board.protocol=dragon_isp
+W2board.program.protocol=dragon_isp
+W2board.program.tool=xmcprog
+W2board.program.extra_params=-Pusb
+
+W2board.serial.disableDTR=true
+W2board.serial.disableRTS=true
+
+W2board.build.mcu=w2
+W2board.build.f_cpu=6000000L
+W2board.build.board=mips_w2
+W2board.build.board.version=1000
+W2board.build.board.type=T038x0064
+W2board.build.board.v=0064
+W2board.build.core=./
+W2board.build.variant=./
+W2board.build.board_variant=W2board
+W2board.build.flash_size=64K
+W2board.build.flash_ld=linker_script.ld
+W2board.build.extra_flags=-DARM_MATH_CM0 -DXMC1_SERIES
+
+W2board.menu.UART.debug=PC
+W2board.menu.UART.debug.uart.selected=-DSERIAL_HOSTPC
+W2board.menu.UART.onBoard=On Board
+W2board.menu.UART.onBoard.uart.selected=-DSERIAL_ONBOARD

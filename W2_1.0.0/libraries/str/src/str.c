@@ -1,0 +1,49 @@
+
+#include "MCU.h"
+#include "str.h"
+
+uint8_t *xtoa(uint32_t num)
+{
+    static uint8_t buf[9];
+    register uint8_t i, j, digit;
+
+    buf[8] = 0;
+    for (i = 7; i >= 0; --i)    
+    {
+        digit = num & 0xf;
+        buf[i] = digit + (digit < 10 ? '0' : 'A' - 10);
+        num >>= 4;
+        if (num == 0) {
+            break;
+        }
+    }
+
+    if (i > 0) {
+        j=i;
+        digit= 8-j;
+        for (i= 0; i <= digit; i++) {
+            buf[i]= buf[i+j];
+        }
+    }
+	
+    return buf;
+}
+
+uint8_t *xtoa_8bit(uint8_t num)
+{
+    static uint8_t buf[3];
+    register uint8_t i, j, digit;
+
+    buf[2] = 0;
+    for (i = 1; i >= 0; --i)    
+    {
+        digit = num & 0xf;
+        buf[i] = digit + (digit < 10 ? '0' : 'A' - 10);
+        num >>= 4;
+        if(0 == i)
+        	{
+        		break;
+        	}
+    }
+    return buf;
+}

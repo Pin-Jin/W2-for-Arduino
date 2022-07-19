@@ -21,7 +21,7 @@ compiler.size.cmd=mips-mti-elf-size
 compiler.S.cmd=mips-mti-elf-as
 compiler.c.elf.cmd = mips-mti-elf-ld
 
-compiler.support.path = -I{runtime.platform.path}/W2 -I{runtime.platform.path}/std -I{runtime.platform.path}/core
+compiler.support.path = -I {runtime.platform.path}/W2 -I {runtime.platform.path}/std -I {runtime.platform.path}/core
 
 # Toolchain definitions
 # ---------

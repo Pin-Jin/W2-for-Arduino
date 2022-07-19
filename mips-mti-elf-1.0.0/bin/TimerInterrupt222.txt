@@ -1,0 +1,1250 @@
+
+TimerInterrupt.bin:     file format binary
+
+
+Disassembly of section .data:
+
+00000000 <.data>:
+       0:	00000000 	nop
+       4:	08000007 	j	0x1c
+       8:	00000000 	nop
+       c:	3c1c0100 	lui	gp,0x100
+      10:	379c8100 	ori	gp,gp,0x8100
+      14:	0800001a 	j	0x68
+      18:	00000000 	nop
+      1c:	3c1c0100 	lui	gp,0x100
+      20:	379c8100 	ori	gp,gp,0x8100
+      24:	3c040100 	lui	a0,0x100
+      28:	34840108 	ori	a0,a0,0x108
+      2c:	3c050100 	lui	a1,0x100
+      30:	34a5011c 	ori	a1,a1,0x11c
+      34:	3c1d0100 	lui	sp,0x100
+      38:	37bd1f00 	ori	sp,sp,0x1f00
+      3c:	ac800000 	sw	zero,0(a0)
+      40:	0085182a 	slt	v1,a0,a1
+      44:	1460fffd 	bnez	v1,0x3c
+      48:	24840004 	addiu	a0,a0,4
+      4c:	401a6000 	mfc0	k0,$12
+      50:	375affff 	ori	k0,k0,0xffff
+      54:	409a6000 	mtc0	k0,$12
+      58:	00000000 	nop
+      5c:	0c000452 	jal	0x1148
+      60:	00000000 	nop
+      64:	08000019 	j	0x64
+      68:	23bdff74 	addi	sp,sp,-140
+      6c:	afa10010 	sw	at,16(sp)
+      70:	afa20014 	sw	v0,20(sp)
+      74:	afa30018 	sw	v1,24(sp)
+      78:	afa4001c 	sw	a0,28(sp)
+      7c:	afa50020 	sw	a1,32(sp)
+      80:	afa60024 	sw	a2,36(sp)
+      84:	afa70028 	sw	a3,40(sp)
+      88:	afa8002c 	sw	t0,44(sp)
+      8c:	afa90030 	sw	t1,48(sp)
+      90:	afaa0034 	sw	t2,52(sp)
+      94:	afab0038 	sw	t3,56(sp)
+      98:	afac003c 	sw	t4,60(sp)
+      9c:	afad0040 	sw	t5,64(sp)
+      a0:	afae0044 	sw	t6,68(sp)
+      a4:	afaf0048 	sw	t7,72(sp)
+      a8:	afb8004c 	sw	t8,76(sp)
+      ac:	afb90050 	sw	t9,80(sp)
+      b0:	afbf0054 	sw	ra,84(sp)
+      b4:	401a7000 	mfc0	k0,$14
+      b8:	afba0058 	sw	k0,88(sp)
+      bc:	3c100100 	lui	s0,0x100
+      c0:	36101ff8 	ori	s0,s0,0x1ff8
+      c4:	ae1a0000 	sw	k0,0(s0)
+      c8:	0000d810 	mfhi	k1
+      cc:	afbb005c 	sw	k1,92(sp)
+      d0:	0000d812 	mflo	k1
+      d4:	afbb0060 	sw	k1,96(sp)
+      d8:	afbe0064 	sw	s8,100(sp)
+      dc:	afb00068 	sw	s0,104(sp)
+      e0:	afb1006c 	sw	s1,108(sp)
+      e4:	afb20070 	sw	s2,112(sp)
+      e8:	afb30074 	sw	s3,116(sp)
+      ec:	afb40078 	sw	s4,120(sp)
+      f0:	afb5007c 	sw	s5,124(sp)
+      f4:	afb60080 	sw	s6,128(sp)
+      f8:	afb70084 	sw	s7,132(sp)
+      fc:	3c080100 	lui	t0,0x100
+     100:	35081ff4 	ori	t0,t0,0x1ff4
+     104:	8d090000 	lw	t1,0(t0)
+     108:	21290001 	addi	t1,t1,1
+     10c:	ad090000 	sw	t1,0(t0)
+     110:	00094880 	sll	t1,t1,0x2
+     114:	01094022 	sub	t0,t0,t1
+     118:	ad1d0000 	sw	sp,0(t0)
+     11c:	0c0003d8 	jal	0xf60
+     120:	00000000 	nop
+     124:	3c080100 	lui	t0,0x100
+     128:	35081ff4 	ori	t0,t0,0x1ff4
+     12c:	8d090000 	lw	t1,0(t0)
+     130:	2129ffff 	addi	t1,t1,-1
+     134:	ad090000 	sw	t1,0(t0)
+     138:	8fa10010 	lw	at,16(sp)
+     13c:	8fa20014 	lw	v0,20(sp)
+     140:	8fa30018 	lw	v1,24(sp)
+     144:	8fa4001c 	lw	a0,28(sp)
+     148:	8fa50020 	lw	a1,32(sp)
+     14c:	8fa60024 	lw	a2,36(sp)
+     150:	8fa70028 	lw	a3,40(sp)
+     154:	8fa8002c 	lw	t0,44(sp)
+     158:	8fa90030 	lw	t1,48(sp)
+     15c:	8faa0034 	lw	t2,52(sp)
+     160:	8fab0038 	lw	t3,56(sp)
+     164:	8fac003c 	lw	t4,60(sp)
+     168:	8fad0040 	lw	t5,64(sp)
+     16c:	8fae0044 	lw	t6,68(sp)
+     170:	8faf0048 	lw	t7,72(sp)
+     174:	8fb8004c 	lw	t8,76(sp)
+     178:	8fb90050 	lw	t9,80(sp)
+     17c:	8fbf0054 	lw	ra,84(sp)
+     180:	8fba0058 	lw	k0,88(sp)
+     184:	8fbb005c 	lw	k1,92(sp)
+     188:	03600011 	mthi	k1
+     18c:	8fbb0060 	lw	k1,96(sp)
+     190:	03600013 	mtlo	k1
+     194:	8fbe0064 	lw	s8,100(sp)
+     198:	8fb00068 	lw	s0,104(sp)
+     19c:	8fb1006c 	lw	s1,108(sp)
+     1a0:	8fb20070 	lw	s2,112(sp)
+     1a4:	8fb30074 	lw	s3,116(sp)
+     1a8:	8fb40078 	lw	s4,120(sp)
+     1ac:	8fb5007c 	lw	s5,124(sp)
+     1b0:	8fb60080 	lw	s6,128(sp)
+     1b4:	8fb70084 	lw	s7,132(sp)
+     1b8:	23bd008c 	addi	sp,sp,140
+     1bc:	3c1c0100 	lui	gp,0x100
+     1c0:	379c80f0 	ori	gp,gp,0x80f0
+     1c4:	00000000 	nop
+     1c8:	03400008 	jr	k0
+     1cc:	42000010 	c0	0x10
+     1d0:	00000000 	nop
+     1d4:	40026800 	mfc0	v0,$13
+     1d8:	03e00008 	jr	ra
+     1dc:	00000000 	nop
+     1e0:	00000000 	nop
+     1e4:	40021800 	mfc0	v0,$3
+     1e8:	03e00008 	jr	ra
+     1ec:	00000000 	nop
+	...
+     1f8:	aca40000 	sw	a0,0(a1)
+     1fc:	00000000 	nop
+     200:	24050007 	li	a1,7
+     204:	3c041010 	lui	a0,0x1010
+     208:	00000000 	nop
+     20c:	8c820000 	lw	v0,0(a0)
+     210:	00451024 	and	v0,v0,a1
+     214:	1c40fffd 	bgtz	v0,0x20c
+     218:	00000000 	nop
+     21c:	03e00008 	jr	ra
+     220:	00000000 	nop
+	...
+     22c:	ac800000 	sw	zero,0(a0)
+     230:	00000000 	nop
+     234:	24050007 	li	a1,7
+     238:	3c041010 	lui	a0,0x1010
+     23c:	00000000 	nop
+     240:	8c820000 	lw	v0,0(a0)
+     244:	00451024 	and	v0,v0,a1
+     248:	1c40fffd 	bgtz	v0,0x240
+     24c:	00000000 	nop
+     250:	03e00008 	jr	ra
+     254:	00000000 	nop
+	...
+     260:	14a00002 	bnez	a1,0x26c
+     264:	0085001a 	div	zero,a0,a1
+     268:	0007000d 	break	0x7
+     26c:	2401ffff 	li	at,-1
+     270:	14a10004 	bne	a1,at,0x284
+     274:	3c018000 	lui	at,0x8000
+     278:	14810002 	bne	a0,at,0x284
+     27c:	00000000 	nop
+     280:	0006000d 	break	0x6
+     284:	00002012 	mflo	a0
+     288:	00000000 	nop
+     28c:	00001810 	mfhi	v1
+     290:	03e00008 	jr	ra
+     294:	00000000 	nop
+     298:	00000000 	nop
+     29c:	27bdfff0 	addiu	sp,sp,-16
+     2a0:	afbe000c 	sw	s8,12(sp)
+     2a4:	afb20008 	sw	s2,8(sp)
+     2a8:	afb10004 	sw	s1,4(sp)
+     2ac:	afb00000 	sw	s0,0(sp)
+     2b0:	03a0f021 	move	s8,sp
+     2b4:	3c020100 	lui	v0,0x100
+     2b8:	8c510100 	lw	s1,256(v0)
+     2bc:	3c021f80 	lui	v0,0x1f80
+     2c0:	34420701 	ori	v0,v0,0x701
+     2c4:	8c420000 	lw	v0,0(v0)
+     2c8:	00000000 	nop
+     2cc:	30421000 	andi	v0,v0,0x1000
+     2d0:	00029302 	srl	s2,v0,0xc
+     2d4:	24020001 	li	v0,1
+     2d8:	16420002 	bne	s2,v0,0x2e4
+     2dc:	00000000 	nop
+     2e0:	00118842 	srl	s1,s1,0x1
+     2e4:	3c021f80 	lui	v0,0x1f80
+     2e8:	34420701 	ori	v0,v0,0x701
+     2ec:	8c420000 	lw	v0,0(v0)
+     2f0:	00000000 	nop
+     2f4:	30420f00 	andi	v0,v0,0xf00
+     2f8:	00029202 	srl	s2,v0,0x8
+     2fc:	2e420010 	sltiu	v0,s2,16
+     300:	10400039 	beqz	v0,0x3e8
+     304:	00000000 	nop
+     308:	00121880 	sll	v1,s2,0x2
+     30c:	3c021000 	lui	v0,0x1000
+     310:	24421334 	addiu	v0,v0,4916
+     314:	00621021 	addu	v0,v1,v0
+     318:	8c420000 	lw	v0,0(v0)
+     31c:	00000000 	nop
+     320:	00400008 	jr	v0
+     324:	00000000 	nop
+     328:	24100005 	li	s0,5
+     32c:	1000002f 	b	0x3ec
+     330:	00000000 	nop
+     334:	24100004 	li	s0,4
+     338:	1000002c 	b	0x3ec
+     33c:	00000000 	nop
+     340:	24100007 	li	s0,7
+     344:	10000029 	b	0x3ec
+     348:	00000000 	nop
+     34c:	24100006 	li	s0,6
+     350:	10000026 	b	0x3ec
+     354:	00000000 	nop
+     358:	24100001 	li	s0,1
+     35c:	10000023 	b	0x3ec
+     360:	00000000 	nop
+     364:	00008021 	move	s0,zero
+     368:	10000020 	b	0x3ec
+     36c:	00000000 	nop
+     370:	24100003 	li	s0,3
+     374:	1000001d 	b	0x3ec
+     378:	00000000 	nop
+     37c:	24100002 	li	s0,2
+     380:	1000001a 	b	0x3ec
+     384:	00000000 	nop
+     388:	2410000d 	li	s0,13
+     38c:	10000017 	b	0x3ec
+     390:	00000000 	nop
+     394:	2410000c 	li	s0,12
+     398:	10000014 	b	0x3ec
+     39c:	00000000 	nop
+     3a0:	2410000f 	li	s0,15
+     3a4:	10000011 	b	0x3ec
+     3a8:	00000000 	nop
+     3ac:	2410000e 	li	s0,14
+     3b0:	1000000e 	b	0x3ec
+     3b4:	00000000 	nop
+     3b8:	24100009 	li	s0,9
+     3bc:	1000000b 	b	0x3ec
+     3c0:	00000000 	nop
+     3c4:	24100008 	li	s0,8
+     3c8:	10000008 	b	0x3ec
+     3cc:	00000000 	nop
+     3d0:	2410000b 	li	s0,11
+     3d4:	10000005 	b	0x3ec
+     3d8:	00000000 	nop
+     3dc:	2410000a 	li	s0,10
+     3e0:	10000002 	b	0x3ec
+     3e4:	00000000 	nop
+     3e8:	00000000 	nop
+     3ec:	26020001 	addiu	v0,s0,1
+     3f0:	00021040 	sll	v0,v0,0x1
+     3f4:	02220018 	mult	s1,v0
+     3f8:	00008812 	mflo	s1
+     3fc:	02201021 	move	v0,s1
+     400:	03c0e821 	move	sp,s8
+     404:	8fbe000c 	lw	s8,12(sp)
+     408:	8fb20008 	lw	s2,8(sp)
+     40c:	8fb10004 	lw	s1,4(sp)
+     410:	8fb00000 	lw	s0,0(sp)
+     414:	27bd0010 	addiu	sp,sp,16
+     418:	03e00008 	jr	ra
+     41c:	00000000 	nop
+     420:	27bdfff0 	addiu	sp,sp,-16
+     424:	afbe000c 	sw	s8,12(sp)
+     428:	afb10008 	sw	s1,8(sp)
+     42c:	afb00004 	sw	s0,4(sp)
+     430:	03a0f021 	move	s8,sp
+     434:	afc40010 	sw	a0,16(s8)
+     438:	00008821 	move	s1,zero
+     43c:	00008021 	move	s0,zero
+     440:	3c021f80 	lui	v0,0x1f80
+     444:	34420701 	ori	v0,v0,0x701
+     448:	3c031f80 	lui	v1,0x1f80
+     44c:	34630701 	ori	v1,v1,0x701
+     450:	8c640000 	lw	a0,0(v1)
+     454:	2403efff 	li	v1,-4097
+     458:	00832024 	and	a0,a0,v1
+     45c:	00111b00 	sll	v1,s1,0xc
+     460:	00831825 	or	v1,a0,v1
+     464:	ac430000 	sw	v1,0(v0)
+     468:	3c021f80 	lui	v0,0x1f80
+     46c:	34420701 	ori	v0,v0,0x701
+     470:	3c031f80 	lui	v1,0x1f80
+     474:	34630701 	ori	v1,v1,0x701
+     478:	8c640000 	lw	a0,0(v1)
+     47c:	2403f0ff 	li	v1,-3841
+     480:	00832024 	and	a0,a0,v1
+     484:	00101a00 	sll	v1,s0,0x8
+     488:	00831825 	or	v1,a0,v1
+     48c:	ac430000 	sw	v1,0(v0)
+     490:	03c0e821 	move	sp,s8
+     494:	8fbe000c 	lw	s8,12(sp)
+     498:	8fb10008 	lw	s1,8(sp)
+     49c:	8fb00004 	lw	s0,4(sp)
+     4a0:	27bd0010 	addiu	sp,sp,16
+     4a4:	03e00008 	jr	ra
+     4a8:	00000000 	nop
+     4ac:	27bdffe0 	addiu	sp,sp,-32
+     4b0:	afbf001c 	sw	ra,28(sp)
+     4b4:	afbe0018 	sw	s8,24(sp)
+     4b8:	03a0f021 	move	s8,sp
+     4bc:	0c0000a7 	jal	0x29c
+     4c0:	00000000 	nop
+     4c4:	afc20010 	sw	v0,16(s8)
+     4c8:	3c021f80 	lui	v0,0x1f80
+     4cc:	34420702 	ori	v0,v0,0x702
+     4d0:	8c420000 	lw	v0,0(v0)
+     4d4:	00000000 	nop
+     4d8:	30423000 	andi	v0,v0,0x3000
+     4dc:	00021302 	srl	v0,v0,0xc
+     4e0:	afc20014 	sw	v0,20(s8)
+     4e4:	8fc20014 	lw	v0,20(s8)
+     4e8:	24030001 	li	v1,1
+     4ec:	10430014 	beq	v0,v1,0x540
+     4f0:	00000000 	nop
+     4f4:	2c430001 	sltiu	v1,v0,1
+     4f8:	14600016 	bnez	v1,0x554
+     4fc:	00000000 	nop
+     500:	24030002 	li	v1,2
+     504:	10430009 	beq	v0,v1,0x52c
+     508:	00000000 	nop
+     50c:	24030003 	li	v1,3
+     510:	14430015 	bne	v0,v1,0x568
+     514:	00000000 	nop
+     518:	8fc20010 	lw	v0,16(s8)
+     51c:	00000000 	nop
+     520:	00021042 	srl	v0,v0,0x1
+     524:	10000012 	b	0x570
+     528:	00000000 	nop
+     52c:	8fc20010 	lw	v0,16(s8)
+     530:	00000000 	nop
+     534:	00021082 	srl	v0,v0,0x2
+     538:	1000000d 	b	0x570
+     53c:	00000000 	nop
+     540:	8fc20010 	lw	v0,16(s8)
+     544:	00000000 	nop
+     548:	000210c2 	srl	v0,v0,0x3
+     54c:	10000008 	b	0x570
+     550:	00000000 	nop
+     554:	8fc20010 	lw	v0,16(s8)
+     558:	00000000 	nop
+     55c:	00021102 	srl	v0,v0,0x4
+     560:	10000003 	b	0x570
+     564:	00000000 	nop
+     568:	10000001 	b	0x570
+     56c:	00000000 	nop
+     570:	03c0e821 	move	sp,s8
+     574:	8fbf001c 	lw	ra,28(sp)
+     578:	8fbe0018 	lw	s8,24(sp)
+     57c:	27bd0020 	addiu	sp,sp,32
+     580:	03e00008 	jr	ra
+     584:	00000000 	nop
+     588:	27bdfff8 	addiu	sp,sp,-8
+     58c:	afbe0004 	sw	s8,4(sp)
+     590:	afb00000 	sw	s0,0(sp)
+     594:	03a0f021 	move	s8,sp
+     598:	afc40008 	sw	a0,8(s8)
+     59c:	8fc20008 	lw	v0,8(s8)
+     5a0:	24030002 	li	v1,2
+     5a4:	10430014 	beq	v0,v1,0x5f8
+     5a8:	00000000 	nop
+     5ac:	2c430003 	sltiu	v1,v0,3
+     5b0:	10600006 	beqz	v1,0x5cc
+     5b4:	00000000 	nop
+     5b8:	24030001 	li	v1,1
+     5bc:	1043000b 	beq	v0,v1,0x5ec
+     5c0:	00000000 	nop
+     5c4:	10000015 	b	0x61c
+     5c8:	00000000 	nop
+     5cc:	24030004 	li	v1,4
+     5d0:	1043000c 	beq	v0,v1,0x604
+     5d4:	00000000 	nop
+     5d8:	24030010 	li	v1,16
+     5dc:	1043000c 	beq	v0,v1,0x610
+     5e0:	00000000 	nop
+     5e4:	1000000d 	b	0x61c
+     5e8:	00000000 	nop
+     5ec:	24100003 	li	s0,3
+     5f0:	1000000c 	b	0x624
+     5f4:	00000000 	nop
+     5f8:	24100002 	li	s0,2
+     5fc:	10000009 	b	0x624
+     600:	00000000 	nop
+     604:	24100001 	li	s0,1
+     608:	10000006 	b	0x624
+     60c:	00000000 	nop
+     610:	00008021 	move	s0,zero
+     614:	10000003 	b	0x624
+     618:	00000000 	nop
+     61c:	00008021 	move	s0,zero
+     620:	00000000 	nop
+     624:	3c021f80 	lui	v0,0x1f80
+     628:	34420702 	ori	v0,v0,0x702
+     62c:	3c031f80 	lui	v1,0x1f80
+     630:	34630702 	ori	v1,v1,0x702
+     634:	8c640000 	lw	a0,0(v1)
+     638:	2403cfff 	li	v1,-12289
+     63c:	00832024 	and	a0,a0,v1
+     640:	00101b00 	sll	v1,s0,0xc
+     644:	00831825 	or	v1,a0,v1
+     648:	ac430000 	sw	v1,0(v0)
+     64c:	03c0e821 	move	sp,s8
+     650:	8fbe0004 	lw	s8,4(sp)
+     654:	8fb00000 	lw	s0,0(sp)
+     658:	27bd0008 	addiu	sp,sp,8
+     65c:	03e00008 	jr	ra
+     660:	00000000 	nop
+     664:	27bdffe8 	addiu	sp,sp,-24
+     668:	afbf0014 	sw	ra,20(sp)
+     66c:	afbe0010 	sw	s8,16(sp)
+     670:	03a0f021 	move	s8,sp
+     674:	afc40018 	sw	a0,24(s8)
+     678:	afc5001c 	sw	a1,28(s8)
+     67c:	afc60020 	sw	a2,32(s8)
+     680:	3c021f80 	lui	v0,0x1f80
+     684:	34420502 	ori	v0,v0,0x502
+     688:	240300ff 	li	v1,255
+     68c:	ac430000 	sw	v1,0(v0)
+     690:	3c021f80 	lui	v0,0x1f80
+     694:	34420503 	ori	v0,v0,0x503
+     698:	240300ff 	li	v1,255
+     69c:	ac430000 	sw	v1,0(v0)
+     6a0:	3c021f80 	lui	v0,0x1f80
+     6a4:	34420500 	ori	v0,v0,0x500
+     6a8:	ac400000 	sw	zero,0(v0)
+     6ac:	3c021f80 	lui	v0,0x1f80
+     6b0:	34420704 	ori	v0,v0,0x704
+     6b4:	ac400000 	sw	zero,0(v0)
+     6b8:	3c021f80 	lui	v0,0x1f80
+     6bc:	34420700 	ori	v0,v0,0x700
+     6c0:	ac400000 	sw	zero,0(v0)
+     6c4:	3c020100 	lui	v0,0x100
+     6c8:	34421ff4 	ori	v0,v0,0x1ff4
+     6cc:	ac400000 	sw	zero,0(v0)
+     6d0:	3c020100 	lui	v0,0x100
+     6d4:	34421ffc 	ori	v0,v0,0x1ffc
+     6d8:	ac400000 	sw	zero,0(v0)
+     6dc:	3c020100 	lui	v0,0x100
+     6e0:	8fc30018 	lw	v1,24(s8)
+     6e4:	00000000 	nop
+     6e8:	ac430100 	sw	v1,256(v0)
+     6ec:	8fc4001c 	lw	a0,28(s8)
+     6f0:	0c000108 	jal	0x420
+     6f4:	00000000 	nop
+     6f8:	8fc40020 	lw	a0,32(s8)
+     6fc:	0c000162 	jal	0x588
+     700:	00000000 	nop
+     704:	03c0e821 	move	sp,s8
+     708:	8fbf0014 	lw	ra,20(sp)
+     70c:	8fbe0010 	lw	s8,16(sp)
+     710:	27bd0018 	addiu	sp,sp,24
+     714:	03e00008 	jr	ra
+     718:	00000000 	nop
+     71c:	27bdfff8 	addiu	sp,sp,-8
+     720:	afbe0004 	sw	s8,4(sp)
+     724:	afb00000 	sw	s0,0(sp)
+     728:	03a0f021 	move	s8,sp
+     72c:	afc40008 	sw	a0,8(s8)
+     730:	10000009 	b	0x758
+     734:	00000000 	nop
+     738:	00008021 	move	s0,zero
+     73c:	10000003 	b	0x74c
+     740:	00000000 	nop
+     744:	00000000 	nop
+     748:	26100001 	addiu	s0,s0,1
+     74c:	2e0200c8 	sltiu	v0,s0,200
+     750:	1440fffc 	bnez	v0,0x744
+     754:	00000000 	nop
+     758:	8fc20008 	lw	v0,8(s8)
+     75c:	00000000 	nop
+     760:	2443ffff 	addiu	v1,v0,-1
+     764:	afc30008 	sw	v1,8(s8)
+     768:	1440fff3 	bnez	v0,0x738
+     76c:	00000000 	nop
+     770:	03c0e821 	move	sp,s8
+     774:	8fbe0004 	lw	s8,4(sp)
+     778:	8fb00000 	lw	s0,0(sp)
+     77c:	27bd0008 	addiu	sp,sp,8
+     780:	03e00008 	jr	ra
+     784:	00000000 	nop
+     788:	27bdfff8 	addiu	sp,sp,-8
+     78c:	afbe0004 	sw	s8,4(sp)
+     790:	afb00000 	sw	s0,0(sp)
+     794:	03a0f021 	move	s8,sp
+     798:	00008021 	move	s0,zero
+     79c:	10000005 	b	0x7b4
+     7a0:	00000000 	nop
+     7a4:	3c020100 	lui	v0,0x100
+     7a8:	02021021 	addu	v0,s0,v0
+     7ac:	ac400000 	sw	zero,0(v0)
+     7b0:	26100004 	addiu	s0,s0,4
+     7b4:	2e022000 	sltiu	v0,s0,8192
+     7b8:	1440fffa 	bnez	v0,0x7a4
+     7bc:	00000000 	nop
+     7c0:	03c0e821 	move	sp,s8
+     7c4:	8fbe0004 	lw	s8,4(sp)
+     7c8:	8fb00000 	lw	s0,0(sp)
+     7cc:	27bd0008 	addiu	sp,sp,8
+     7d0:	03e00008 	jr	ra
+     7d4:	00000000 	nop
+     7d8:	27bdfff8 	addiu	sp,sp,-8
+     7dc:	afbe0004 	sw	s8,4(sp)
+     7e0:	afb00000 	sw	s0,0(sp)
+     7e4:	03a0f021 	move	s8,sp
+     7e8:	afc40008 	sw	a0,8(s8)
+     7ec:	00a01021 	move	v0,a1
+     7f0:	a3c2000c 	sb	v0,12(s8)
+     7f4:	24100001 	li	s0,1
+     7f8:	8fc20008 	lw	v0,8(s8)
+     7fc:	00000000 	nop
+     800:	24420001 	addiu	v0,v0,1
+     804:	8c500000 	lw	s0,0(v0)
+     808:	00000000 	nop
+     80c:	1600fffa 	bnez	s0,0x7f8
+     810:	00000000 	nop
+     814:	8fc20008 	lw	v0,8(s8)
+     818:	00000000 	nop
+     81c:	24420002 	addiu	v0,v0,2
+     820:	00401821 	move	v1,v0
+     824:	93c2000c 	lbu	v0,12(s8)
+     828:	00000000 	nop
+     82c:	ac620000 	sw	v0,0(v1)
+     830:	03c0e821 	move	sp,s8
+     834:	8fbe0004 	lw	s8,4(sp)
+     838:	8fb00000 	lw	s0,0(sp)
+     83c:	27bd0008 	addiu	sp,sp,8
+     840:	03e00008 	jr	ra
+     844:	00000000 	nop
+     848:	27bdfff0 	addiu	sp,sp,-16
+     84c:	afbe000c 	sw	s8,12(sp)
+     850:	afb10008 	sw	s1,8(sp)
+     854:	afb00004 	sw	s0,4(sp)
+     858:	03a0f021 	move	s8,sp
+     85c:	afc40010 	sw	a0,16(s8)
+     860:	00a01021 	move	v0,a1
+     864:	a7c20014 	sh	v0,20(s8)
+     868:	24110001 	li	s1,1
+     86c:	00008021 	move	s0,zero
+     870:	10000014 	b	0x8c4
+     874:	00000000 	nop
+     878:	8fc20010 	lw	v0,16(s8)
+     87c:	00000000 	nop
+     880:	24420001 	addiu	v0,v0,1
+     884:	8c510000 	lw	s1,0(v0)
+     888:	00000000 	nop
+     88c:	1620fffa 	bnez	s1,0x878
+     890:	00000000 	nop
+     894:	8fc20010 	lw	v0,16(s8)
+     898:	00000000 	nop
+     89c:	24420002 	addiu	v0,v0,2
+     8a0:	00401821 	move	v1,v0
+     8a4:	97c20014 	lhu	v0,20(s8)
+     8a8:	00000000 	nop
+     8ac:	ac620000 	sw	v0,0(v1)
+     8b0:	97c20014 	lhu	v0,20(s8)
+     8b4:	00000000 	nop
+     8b8:	00021202 	srl	v0,v0,0x8
+     8bc:	a7c20014 	sh	v0,20(s8)
+     8c0:	26100001 	addiu	s0,s0,1
+     8c4:	2e020002 	sltiu	v0,s0,2
+     8c8:	1440ffeb 	bnez	v0,0x878
+     8cc:	00000000 	nop
+     8d0:	03c0e821 	move	sp,s8
+     8d4:	8fbe000c 	lw	s8,12(sp)
+     8d8:	8fb10008 	lw	s1,8(sp)
+     8dc:	8fb00004 	lw	s0,4(sp)
+     8e0:	27bd0010 	addiu	sp,sp,16
+     8e4:	03e00008 	jr	ra
+     8e8:	00000000 	nop
+     8ec:	27bdfff0 	addiu	sp,sp,-16
+     8f0:	afbe000c 	sw	s8,12(sp)
+     8f4:	afb10008 	sw	s1,8(sp)
+     8f8:	afb00004 	sw	s0,4(sp)
+     8fc:	03a0f021 	move	s8,sp
+     900:	afc40010 	sw	a0,16(s8)
+     904:	afc50014 	sw	a1,20(s8)
+     908:	24110001 	li	s1,1
+     90c:	00008021 	move	s0,zero
+     910:	10000014 	b	0x964
+     914:	00000000 	nop
+     918:	8fc20010 	lw	v0,16(s8)
+     91c:	00000000 	nop
+     920:	24420001 	addiu	v0,v0,1
+     924:	8c510000 	lw	s1,0(v0)
+     928:	00000000 	nop
+     92c:	1620fffa 	bnez	s1,0x918
+     930:	00000000 	nop
+     934:	8fc20010 	lw	v0,16(s8)
+     938:	00000000 	nop
+     93c:	24420002 	addiu	v0,v0,2
+     940:	00401821 	move	v1,v0
+     944:	8fc20014 	lw	v0,20(s8)
+     948:	00000000 	nop
+     94c:	ac620000 	sw	v0,0(v1)
+     950:	8fc20014 	lw	v0,20(s8)
+     954:	00000000 	nop
+     958:	00021202 	srl	v0,v0,0x8
+     95c:	afc20014 	sw	v0,20(s8)
+     960:	26100001 	addiu	s0,s0,1
+     964:	2e020004 	sltiu	v0,s0,4
+     968:	1440ffeb 	bnez	v0,0x918
+     96c:	00000000 	nop
+     970:	03c0e821 	move	sp,s8
+     974:	8fbe000c 	lw	s8,12(sp)
+     978:	8fb10008 	lw	s1,8(sp)
+     97c:	8fb00004 	lw	s0,4(sp)
+     980:	27bd0010 	addiu	sp,sp,16
+     984:	03e00008 	jr	ra
+     988:	00000000 	nop
+     98c:	27bdfff8 	addiu	sp,sp,-8
+     990:	afbe0004 	sw	s8,4(sp)
+     994:	afb00000 	sw	s0,0(sp)
+     998:	03a0f021 	move	s8,sp
+     99c:	afc40008 	sw	a0,8(s8)
+     9a0:	afc5000c 	sw	a1,12(s8)
+     9a4:	24100001 	li	s0,1
+     9a8:	10000013 	b	0x9f8
+     9ac:	00000000 	nop
+     9b0:	8fc20008 	lw	v0,8(s8)
+     9b4:	00000000 	nop
+     9b8:	24420001 	addiu	v0,v0,1
+     9bc:	8c500000 	lw	s0,0(v0)
+     9c0:	00000000 	nop
+     9c4:	1600fffa 	bnez	s0,0x9b0
+     9c8:	00000000 	nop
+     9cc:	8fc20008 	lw	v0,8(s8)
+     9d0:	00000000 	nop
+     9d4:	24420002 	addiu	v0,v0,2
+     9d8:	00402021 	move	a0,v0
+     9dc:	8fc2000c 	lw	v0,12(s8)
+     9e0:	00000000 	nop
+     9e4:	24430001 	addiu	v1,v0,1
+     9e8:	afc3000c 	sw	v1,12(s8)
+     9ec:	90420000 	lbu	v0,0(v0)
+     9f0:	00000000 	nop
+     9f4:	ac820000 	sw	v0,0(a0)
+     9f8:	8fc2000c 	lw	v0,12(s8)
+     9fc:	00000000 	nop
+     a00:	90420000 	lbu	v0,0(v0)
+     a04:	00000000 	nop
+     a08:	1440ffe9 	bnez	v0,0x9b0
+     a0c:	00000000 	nop
+     a10:	03c0e821 	move	sp,s8
+     a14:	8fbe0004 	lw	s8,4(sp)
+     a18:	8fb00000 	lw	s0,0(sp)
+     a1c:	27bd0008 	addiu	sp,sp,8
+     a20:	03e00008 	jr	ra
+     a24:	00000000 	nop
+     a28:	27bdffe8 	addiu	sp,sp,-24
+     a2c:	afbe0014 	sw	s8,20(sp)
+     a30:	afb30010 	sw	s3,16(sp)
+     a34:	afb2000c 	sw	s2,12(sp)
+     a38:	afb10008 	sw	s1,8(sp)
+     a3c:	afb00004 	sw	s0,4(sp)
+     a40:	03a0f021 	move	s8,sp
+     a44:	afc40018 	sw	a0,24(s8)
+     a48:	afc5001c 	sw	a1,28(s8)
+     a4c:	afc60020 	sw	a2,32(s8)
+     a50:	24130001 	li	s3,1
+     a54:	00008021 	move	s0,zero
+     a58:	1000001a 	b	0xac4
+     a5c:	00000000 	nop
+     a60:	00101080 	sll	v0,s0,0x2
+     a64:	8fc3001c 	lw	v1,28(s8)
+     a68:	00000000 	nop
+     a6c:	00621021 	addu	v0,v1,v0
+     a70:	8c510000 	lw	s1,0(v0)
+     a74:	00009021 	move	s2,zero
+     a78:	1000000e 	b	0xab4
+     a7c:	00000000 	nop
+     a80:	8fc20018 	lw	v0,24(s8)
+     a84:	00000000 	nop
+     a88:	24420001 	addiu	v0,v0,1
+     a8c:	8c530000 	lw	s3,0(v0)
+     a90:	00000000 	nop
+     a94:	1660fffa 	bnez	s3,0xa80
+     a98:	00000000 	nop
+     a9c:	8fc20018 	lw	v0,24(s8)
+     aa0:	00000000 	nop
+     aa4:	24420002 	addiu	v0,v0,2
+     aa8:	ac510000 	sw	s1,0(v0)
+     aac:	00118a02 	srl	s1,s1,0x8
+     ab0:	26520001 	addiu	s2,s2,1
+     ab4:	2e420004 	sltiu	v0,s2,4
+     ab8:	1440fff1 	bnez	v0,0xa80
+     abc:	00000000 	nop
+     ac0:	26100001 	addiu	s0,s0,1
+     ac4:	8fc20020 	lw	v0,32(s8)
+     ac8:	00000000 	nop
+     acc:	0202102b 	sltu	v0,s0,v0
+     ad0:	1440ffe3 	bnez	v0,0xa60
+     ad4:	00000000 	nop
+     ad8:	03c0e821 	move	sp,s8
+     adc:	8fbe0014 	lw	s8,20(sp)
+     ae0:	8fb30010 	lw	s3,16(sp)
+     ae4:	8fb2000c 	lw	s2,12(sp)
+     ae8:	8fb10008 	lw	s1,8(sp)
+     aec:	8fb00004 	lw	s0,4(sp)
+     af0:	27bd0018 	addiu	sp,sp,24
+     af4:	03e00008 	jr	ra
+     af8:	00000000 	nop
+     afc:	27bdfff8 	addiu	sp,sp,-8
+     b00:	afbe0004 	sw	s8,4(sp)
+     b04:	afb00000 	sw	s0,0(sp)
+     b08:	03a0f021 	move	s8,sp
+     b0c:	afc40008 	sw	a0,8(s8)
+     b10:	00008021 	move	s0,zero
+     b14:	8fc20008 	lw	v0,8(s8)
+     b18:	00000000 	nop
+     b1c:	24420005 	addiu	v0,v0,5
+     b20:	8c420000 	lw	v0,0(v0)
+     b24:	00000000 	nop
+     b28:	30500001 	andi	s0,v0,0x1
+     b2c:	1200fff9 	beqz	s0,0xb14
+     b30:	00000000 	nop
+     b34:	8fc20008 	lw	v0,8(s8)
+     b38:	00000000 	nop
+     b3c:	8c420000 	lw	v0,0(v0)
+     b40:	00000000 	nop
+     b44:	305000ff 	andi	s0,v0,0xff
+     b48:	02001021 	move	v0,s0
+     b4c:	03c0e821 	move	sp,s8
+     b50:	8fbe0004 	lw	s8,4(sp)
+     b54:	8fb00000 	lw	s0,0(sp)
+     b58:	27bd0008 	addiu	sp,sp,8
+     b5c:	03e00008 	jr	ra
+     b60:	00000000 	nop
+     b64:	27bdffe0 	addiu	sp,sp,-32
+     b68:	afbf001c 	sw	ra,28(sp)
+     b6c:	afbe0018 	sw	s8,24(sp)
+     b70:	afb00014 	sw	s0,20(sp)
+     b74:	03a0f021 	move	s8,sp
+     b78:	00801021 	move	v0,a0
+     b7c:	a3c20020 	sb	v0,32(s8)
+     b80:	3c021f80 	lui	v0,0x1f80
+     b84:	34420004 	ori	v0,v0,0x4
+     b88:	8c500000 	lw	s0,0(v0)
+     b8c:	3c021f80 	lui	v0,0x1f80
+     b90:	34420004 	ori	v0,v0,0x4
+     b94:	3c031f80 	lui	v1,0x1f80
+     b98:	34630004 	ori	v1,v1,0x4
+     b9c:	8c640000 	lw	a0,0(v1)
+     ba0:	2403fffe 	li	v1,-2
+     ba4:	00831824 	and	v1,a0,v1
+     ba8:	ac430000 	sw	v1,0(v0)
+     bac:	93c20020 	lbu	v0,32(s8)
+     bb0:	3c041f80 	lui	a0,0x1f80
+     bb4:	00402821 	move	a1,v0
+     bb8:	0c0001f6 	jal	0x7d8
+     bbc:	00000000 	nop
+     bc0:	3c021f80 	lui	v0,0x1f80
+     bc4:	34420004 	ori	v0,v0,0x4
+     bc8:	ac500000 	sw	s0,0(v0)
+     bcc:	03c0e821 	move	sp,s8
+     bd0:	8fbf001c 	lw	ra,28(sp)
+     bd4:	8fbe0018 	lw	s8,24(sp)
+     bd8:	8fb00014 	lw	s0,20(sp)
+     bdc:	27bd0020 	addiu	sp,sp,32
+     be0:	03e00008 	jr	ra
+     be4:	00000000 	nop
+     be8:	27bdffe0 	addiu	sp,sp,-32
+     bec:	afbf001c 	sw	ra,28(sp)
+     bf0:	afbe0018 	sw	s8,24(sp)
+     bf4:	afb00014 	sw	s0,20(sp)
+     bf8:	03a0f021 	move	s8,sp
+     bfc:	afc40020 	sw	a0,32(s8)
+     c00:	3c021f80 	lui	v0,0x1f80
+     c04:	34420004 	ori	v0,v0,0x4
+     c08:	8c500000 	lw	s0,0(v0)
+     c0c:	3c021f80 	lui	v0,0x1f80
+     c10:	34420004 	ori	v0,v0,0x4
+     c14:	3c031f80 	lui	v1,0x1f80
+     c18:	34630004 	ori	v1,v1,0x4
+     c1c:	8c640000 	lw	a0,0(v1)
+     c20:	2403fffe 	li	v1,-2
+     c24:	00831824 	and	v1,a0,v1
+     c28:	ac430000 	sw	v1,0(v0)
+     c2c:	10000013 	b	0xc7c
+     c30:	00000000 	nop
+     c34:	8fc20020 	lw	v0,32(s8)
+     c38:	00000000 	nop
+     c3c:	90430000 	lbu	v1,0(v0)
+     c40:	2402000a 	li	v0,10
+     c44:	14620004 	bne	v1,v0,0xc58
+     c48:	00000000 	nop
+     c4c:	2404000d 	li	a0,13
+     c50:	0c0002d9 	jal	0xb64
+     c54:	00000000 	nop
+     c58:	8fc20020 	lw	v0,32(s8)
+     c5c:	00000000 	nop
+     c60:	24430001 	addiu	v1,v0,1
+     c64:	afc30020 	sw	v1,32(s8)
+     c68:	90420000 	lbu	v0,0(v0)
+     c6c:	00000000 	nop
+     c70:	00402021 	move	a0,v0
+     c74:	0c0002d9 	jal	0xb64
+     c78:	00000000 	nop
+     c7c:	8fc20020 	lw	v0,32(s8)
+     c80:	00000000 	nop
+     c84:	90420000 	lbu	v0,0(v0)
+     c88:	00000000 	nop
+     c8c:	1440ffe9 	bnez	v0,0xc34
+     c90:	00000000 	nop
+     c94:	3c021f80 	lui	v0,0x1f80
+     c98:	34420004 	ori	v0,v0,0x4
+     c9c:	ac500000 	sw	s0,0(v0)
+     ca0:	03c0e821 	move	sp,s8
+     ca4:	8fbf001c 	lw	ra,28(sp)
+     ca8:	8fbe0018 	lw	s8,24(sp)
+     cac:	8fb00014 	lw	s0,20(sp)
+     cb0:	27bd0020 	addiu	sp,sp,32
+     cb4:	03e00008 	jr	ra
+     cb8:	00000000 	nop
+     cbc:	27bdffd8 	addiu	sp,sp,-40
+     cc0:	afbf0024 	sw	ra,36(sp)
+     cc4:	afbe0020 	sw	s8,32(sp)
+     cc8:	afb2001c 	sw	s2,28(sp)
+     ccc:	afb10018 	sw	s1,24(sp)
+     cd0:	afb00014 	sw	s0,20(sp)
+     cd4:	03a0f021 	move	s8,sp
+     cd8:	00009021 	move	s2,zero
+     cdc:	00008821 	move	s1,zero
+     ce0:	10000040 	b	0xde4
+     ce4:	00000000 	nop
+     ce8:	3c041f80 	lui	a0,0x1f80
+     cec:	0c0002bf 	jal	0xafc
+     cf0:	00000000 	nop
+     cf4:	00408021 	move	s0,v0
+     cf8:	2402000d 	li	v0,13
+     cfc:	16020003 	bne	s0,v0,0xd0c
+     d00:	00000000 	nop
+     d04:	1000003a 	b	0xdf0
+     d08:	00000000 	nop
+     d0c:	2402000a 	li	v0,10
+     d10:	12020037 	beq	s0,v0,0xdf0
+     d14:	00000000 	nop
+     d18:	2402000d 	li	v0,13
+     d1c:	12020034 	beq	s0,v0,0xdf0
+     d20:	00000000 	nop
+     d24:	24020020 	li	v0,32
+     d28:	12020031 	beq	s0,v0,0xdf0
+     d2c:	00000000 	nop
+     d30:	2e020030 	sltiu	v0,s0,48
+     d34:	14400008 	bnez	v0,0xd58
+     d38:	00000000 	nop
+     d3c:	2e02003a 	sltiu	v0,s0,58
+     d40:	10400005 	beqz	v0,0xd58
+     d44:	00000000 	nop
+     d48:	2602ffd0 	addiu	v0,s0,-48
+     d4c:	305000ff 	andi	s0,v0,0xff
+     d50:	1000001f 	b	0xdd0
+     d54:	00000000 	nop
+     d58:	2e020041 	sltiu	v0,s0,65
+     d5c:	14400008 	bnez	v0,0xd80
+     d60:	00000000 	nop
+     d64:	2e02005b 	sltiu	v0,s0,91
+     d68:	10400005 	beqz	v0,0xd80
+     d6c:	00000000 	nop
+     d70:	2602ffc9 	addiu	v0,s0,-55
+     d74:	305000ff 	andi	s0,v0,0xff
+     d78:	10000015 	b	0xdd0
+     d7c:	00000000 	nop
+     d80:	2e020061 	sltiu	v0,s0,97
+     d84:	14400008 	bnez	v0,0xda8
+     d88:	00000000 	nop
+     d8c:	2e02007b 	sltiu	v0,s0,123
+     d90:	10400005 	beqz	v0,0xda8
+     d94:	00000000 	nop
+     d98:	2602ffa9 	addiu	v0,s0,-87
+     d9c:	305000ff 	andi	s0,v0,0xff
+     da0:	1000000b 	b	0xdd0
+     da4:	00000000 	nop
+     da8:	24020008 	li	v0,8
+     dac:	16020008 	bne	s0,v0,0xdd0
+     db0:	00000000 	nop
+     db4:	12200003 	beqz	s1,0xdc4
+     db8:	00000000 	nop
+     dbc:	2622ffff 	addiu	v0,s1,-1
+     dc0:	305100ff 	andi	s1,v0,0xff
+     dc4:	00129102 	srl	s2,s2,0x4
+     dc8:	10000006 	b	0xde4
+     dcc:	00000000 	nop
+     dd0:	00121100 	sll	v0,s2,0x4
+     dd4:	02001821 	move	v1,s0
+     dd8:	00439021 	addu	s2,v0,v1
+     ddc:	26220001 	addiu	v0,s1,1
+     de0:	305100ff 	andi	s1,v0,0xff
+     de4:	2e220010 	sltiu	v0,s1,16
+     de8:	1440ffbf 	bnez	v0,0xce8
+     dec:	00000000 	nop
+     df0:	02401021 	move	v0,s2
+     df4:	03c0e821 	move	sp,s8
+     df8:	8fbf0024 	lw	ra,36(sp)
+     dfc:	8fbe0020 	lw	s8,32(sp)
+     e00:	8fb2001c 	lw	s2,28(sp)
+     e04:	8fb10018 	lw	s1,24(sp)
+     e08:	8fb00014 	lw	s0,20(sp)
+     e0c:	27bd0028 	addiu	sp,sp,40
+     e10:	03e00008 	jr	ra
+     e14:	00000000 	nop
+     e18:	27bdfff0 	addiu	sp,sp,-16
+     e1c:	afbe000c 	sw	s8,12(sp)
+     e20:	afb20008 	sw	s2,8(sp)
+     e24:	afb10004 	sw	s1,4(sp)
+     e28:	afb00000 	sw	s0,0(sp)
+     e2c:	03a0f021 	move	s8,sp
+     e30:	afc40010 	sw	a0,16(s8)
+     e34:	3c020100 	lui	v0,0x100
+     e38:	24420110 	addiu	v0,v0,272
+     e3c:	a0400008 	sb	zero,8(v0)
+     e40:	24100007 	li	s0,7
+     e44:	8fc20010 	lw	v0,16(s8)
+     e48:	00000000 	nop
+     e4c:	304200ff 	andi	v0,v0,0xff
+     e50:	3042000f 	andi	v0,v0,0xf
+     e54:	305100ff 	andi	s1,v0,0xff
+     e58:	02002021 	move	a0,s0
+     e5c:	2e22000a 	sltiu	v0,s1,10
+     e60:	10400004 	beqz	v0,0xe74
+     e64:	00000000 	nop
+     e68:	24020030 	li	v0,48
+     e6c:	10000002 	b	0xe78
+     e70:	00000000 	nop
+     e74:	24020037 	li	v0,55
+     e78:	00511021 	addu	v0,v0,s1
+     e7c:	304300ff 	andi	v1,v0,0xff
+     e80:	3c020100 	lui	v0,0x100
+     e84:	24420110 	addiu	v0,v0,272
+     e88:	00821021 	addu	v0,a0,v0
+     e8c:	a0430000 	sb	v1,0(v0)
+     e90:	8fc20010 	lw	v0,16(s8)
+     e94:	00000000 	nop
+     e98:	00021102 	srl	v0,v0,0x4
+     e9c:	afc20010 	sw	v0,16(s8)
+     ea0:	8fc20010 	lw	v0,16(s8)
+     ea4:	00000000 	nop
+     ea8:	14400006 	bnez	v0,0xec4
+     eac:	00000000 	nop
+     eb0:	00000000 	nop
+     eb4:	12000020 	beqz	s0,0xf38
+     eb8:	00000000 	nop
+     ebc:	10000005 	b	0xed4
+     ec0:	00000000 	nop
+     ec4:	2602ffff 	addiu	v0,s0,-1
+     ec8:	305000ff 	andi	s0,v0,0xff
+     ecc:	1000ffdd 	b	0xe44
+     ed0:	00000000 	nop
+     ed4:	02009021 	move	s2,s0
+     ed8:	24020008 	li	v0,8
+     edc:	00521023 	subu	v0,v0,s2
+     ee0:	305100ff 	andi	s1,v0,0xff
+     ee4:	00008021 	move	s0,zero
+     ee8:	10000010 	b	0xf2c
+     eec:	00000000 	nop
+     ef0:	02002021 	move	a0,s0
+     ef4:	02001821 	move	v1,s0
+     ef8:	02401021 	move	v0,s2
+     efc:	00621821 	addu	v1,v1,v0
+     f00:	3c020100 	lui	v0,0x100
+     f04:	24420110 	addiu	v0,v0,272
+     f08:	00621021 	addu	v0,v1,v0
+     f0c:	90430000 	lbu	v1,0(v0)
+     f10:	3c020100 	lui	v0,0x100
+     f14:	24420110 	addiu	v0,v0,272
+     f18:	00821021 	addu	v0,a0,v0
+     f1c:	a0430000 	sb	v1,0(v0)
+     f20:	02001021 	move	v0,s0
+     f24:	24420001 	addiu	v0,v0,1
+     f28:	305000ff 	andi	s0,v0,0xff
+     f2c:	0230102b 	sltu	v0,s1,s0
+     f30:	1040ffef 	beqz	v0,0xef0
+     f34:	00000000 	nop
+     f38:	3c020100 	lui	v0,0x100
+     f3c:	24420110 	addiu	v0,v0,272
+     f40:	03c0e821 	move	sp,s8
+     f44:	8fbe000c 	lw	s8,12(sp)
+     f48:	8fb20008 	lw	s2,8(sp)
+     f4c:	8fb10004 	lw	s1,4(sp)
+     f50:	8fb00000 	lw	s0,0(sp)
+     f54:	27bd0010 	addiu	sp,sp,16
+     f58:	03e00008 	jr	ra
+     f5c:	00000000 	nop
+     f60:	27bdfff0 	addiu	sp,sp,-16
+     f64:	afbe000c 	sw	s8,12(sp)
+     f68:	03a0f021 	move	s8,sp
+     f6c:	24020001 	li	v0,1
+     f70:	afc20000 	sw	v0,0(s8)
+     f74:	3c021f80 	lui	v0,0x1f80
+     f78:	34420100 	ori	v0,v0,0x100
+     f7c:	3c031f80 	lui	v1,0x1f80
+     f80:	34630100 	ori	v1,v1,0x100
+     f84:	8c640000 	lw	a0,0(v1)
+     f88:	2403fffd 	li	v1,-3
+     f8c:	00831824 	and	v1,a0,v1
+     f90:	ac430000 	sw	v1,0(v0)
+     f94:	3c020100 	lui	v0,0x100
+     f98:	8c42010c 	lw	v0,268(v0)
+     f9c:	00000000 	nop
+     fa0:	24430001 	addiu	v1,v0,1
+     fa4:	3c020100 	lui	v0,0x100
+     fa8:	ac43010c 	sw	v1,268(v0)
+     fac:	3c021f80 	lui	v0,0x1f80
+     fb0:	34420103 	ori	v0,v0,0x103
+     fb4:	ac400000 	sw	zero,0(v0)
+     fb8:	3c021f80 	lui	v0,0x1f80
+     fbc:	34420105 	ori	v0,v0,0x105
+     fc0:	ac400000 	sw	zero,0(v0)
+     fc4:	3c021f80 	lui	v0,0x1f80
+     fc8:	34420700 	ori	v0,v0,0x700
+     fcc:	24030001 	li	v1,1
+     fd0:	ac430000 	sw	v1,0(v0)
+     fd4:	3c021f80 	lui	v0,0x1f80
+     fd8:	34420104 	ori	v0,v0,0x104
+     fdc:	24030001 	li	v1,1
+     fe0:	ac430000 	sw	v1,0(v0)
+     fe4:	3c021f80 	lui	v0,0x1f80
+     fe8:	34420101 	ori	v0,v0,0x101
+     fec:	240300a0 	li	v1,160
+     ff0:	ac430000 	sw	v1,0(v0)
+     ff4:	3c021f80 	lui	v0,0x1f80
+     ff8:	34420100 	ori	v0,v0,0x100
+     ffc:	24030082 	li	v1,130
+    1000:	ac430000 	sw	v1,0(v0)
+    1004:	03c0e821 	move	sp,s8
+    1008:	8fbe000c 	lw	s8,12(sp)
+    100c:	27bd0010 	addiu	sp,sp,16
+    1010:	03e00008 	jr	ra
+    1014:	00000000 	nop
+    1018:	27bdfff0 	addiu	sp,sp,-16
+    101c:	afbe000c 	sw	s8,12(sp)
+    1020:	03a0f021 	move	s8,sp
+    1024:	afc40010 	sw	a0,16(s8)
+    1028:	afc00000 	sw	zero,0(s8)
+    102c:	afc00004 	sw	zero,4(s8)
+    1030:	24023181 	li	v0,12673
+    1034:	04400013 	bltz	v0,0x1084
+    1038:	00000000 	nop
+    103c:	24033181 	li	v1,12673
+    1040:	8fc20010 	lw	v0,16(s8)
+    1044:	00000000 	nop
+    1048:	00620018 	mult	v1,v0
+    104c:	00001812 	mflo	v1
+    1050:	3c020100 	lui	v0,0x100
+    1054:	8c420108 	lw	v0,264(v0)
+    1058:	00000000 	nop
+    105c:	14400002 	bnez	v0,0x1068
+    1060:	0062001b 	divu	zero,v1,v0
+    1064:	0007000d 	break	0x7
+    1068:	00001010 	mfhi	v0
+    106c:	00001812 	mflo	v1
+    1070:	8fc20010 	lw	v0,16(s8)
+    1074:	00000000 	nop
+    1078:	00621021 	addu	v0,v1,v0
+    107c:	10000014 	b	0x10d0
+    1080:	00000000 	nop
+    1084:	24023181 	li	v0,12673
+    1088:	00021023 	negu	v0,v0
+    108c:	00401821 	move	v1,v0
+    1090:	8fc20010 	lw	v0,16(s8)
+    1094:	00000000 	nop
+    1098:	00620018 	mult	v1,v0
+    109c:	3c020100 	lui	v0,0x100
+    10a0:	8c420108 	lw	v0,264(v0)
+    10a4:	00001812 	mflo	v1
+	...
+    10b0:	14400002 	bnez	v0,0x10bc
+    10b4:	0062001b 	divu	zero,v1,v0
+    10b8:	0007000d 	break	0x7
+    10bc:	00001010 	mfhi	v0
+    10c0:	00001812 	mflo	v1
+    10c4:	8fc20010 	lw	v0,16(s8)
+    10c8:	00000000 	nop
+    10cc:	00431023 	subu	v0,v0,v1
+    10d0:	03c0e821 	move	sp,s8
+    10d4:	8fbe000c 	lw	s8,12(sp)
+    10d8:	27bd0010 	addiu	sp,sp,16
+    10dc:	03e00008 	jr	ra
+    10e0:	00000000 	nop
+    10e4:	27bdfff8 	addiu	sp,sp,-8
+    10e8:	afbe0004 	sw	s8,4(sp)
+    10ec:	03a0f021 	move	s8,sp
+    10f0:	afc40008 	sw	a0,8(s8)
+    10f4:	afc5000c 	sw	a1,12(s8)
+    10f8:	03c0e821 	move	sp,s8
+    10fc:	8fbe0004 	lw	s8,4(sp)
+    1100:	27bd0008 	addiu	sp,sp,8
+    1104:	03e00008 	jr	ra
+    1108:	00000000 	nop
+    110c:	27bdfff8 	addiu	sp,sp,-8
+    1110:	afbe0004 	sw	s8,4(sp)
+    1114:	03a0f021 	move	s8,sp
+    1118:	afc40008 	sw	a0,8(s8)
+    111c:	afc5000c 	sw	a1,12(s8)
+    1120:	8fc30008 	lw	v1,8(s8)
+    1124:	8fc2000c 	lw	v0,12(s8)
+    1128:	00000000 	nop
+    112c:	00620018 	mult	v1,v0
+    1130:	00001012 	mflo	v0
+    1134:	03c0e821 	move	sp,s8
+    1138:	8fbe0004 	lw	s8,4(sp)
+    113c:	27bd0008 	addiu	sp,sp,8
+    1140:	03e00008 	jr	ra
+    1144:	00000000 	nop
+    1148:	27bdffc8 	addiu	sp,sp,-56
+    114c:	afbf0034 	sw	ra,52(sp)
+    1150:	afbe0030 	sw	s8,48(sp)
+    1154:	03a0f021 	move	s8,sp
+    1158:	24020064 	li	v0,100
+    115c:	afc20018 	sw	v0,24(s8)
+    1160:	24022096 	li	v0,8342
+    1164:	afc20014 	sw	v0,20(s8)
+    1168:	24022096 	li	v0,8342
+    116c:	afc2001c 	sw	v0,28(s8)
+    1170:	2402000c 	li	v0,12
+    1174:	afc20020 	sw	v0,32(s8)
+    1178:	2402000c 	li	v0,12
+    117c:	afc20024 	sw	v0,36(s8)
+    1180:	afc00028 	sw	zero,40(s8)
+    1184:	3c020100 	lui	v0,0x100
+    1188:	3c030009 	lui	v1,0x9
+    118c:	3463e86f 	ori	v1,v1,0xe86f
+    1190:	ac430108 	sw	v1,264(v0)
+    1194:	3c021f80 	lui	v0,0x1f80
+    1198:	34420007 	ori	v0,v0,0x7
+    119c:	24030068 	li	v1,104
+    11a0:	ac430000 	sw	v1,0(v0)
+    11a4:	3c021f80 	lui	v0,0x1f80
+    11a8:	34420700 	ori	v0,v0,0x700
+    11ac:	3c031f80 	lui	v1,0x1f80
+    11b0:	34630700 	ori	v1,v1,0x700
+    11b4:	8c630000 	lw	v1,0(v1)
+    11b8:	00000000 	nop
+    11bc:	34630001 	ori	v1,v1,0x1
+    11c0:	ac430000 	sw	v1,0(v0)
+    11c4:	3c021f80 	lui	v0,0x1f80
+    11c8:	34420103 	ori	v0,v0,0x103
+    11cc:	ac400000 	sw	zero,0(v0)
+    11d0:	3c021f80 	lui	v0,0x1f80
+    11d4:	34420105 	ori	v0,v0,0x105
+    11d8:	ac400000 	sw	zero,0(v0)
+    11dc:	3c021f80 	lui	v0,0x1f80
+    11e0:	34420700 	ori	v0,v0,0x700
+    11e4:	24030001 	li	v1,1
+    11e8:	ac430000 	sw	v1,0(v0)
+    11ec:	3c021f80 	lui	v0,0x1f80
+    11f0:	34420104 	ori	v0,v0,0x104
+    11f4:	24030001 	li	v1,1
+    11f8:	ac430000 	sw	v1,0(v0)
+    11fc:	3c021f80 	lui	v0,0x1f80
+    1200:	34420101 	ori	v0,v0,0x101
+    1204:	24030038 	li	v1,56
+    1208:	ac430000 	sw	v1,0(v0)
+    120c:	3c021f80 	lui	v0,0x1f80
+    1210:	34420100 	ori	v0,v0,0x100
+    1214:	24030082 	li	v1,130
+    1218:	ac430000 	sw	v1,0(v0)
+    121c:	3c021f80 	lui	v0,0x1f80
+    1220:	34420700 	ori	v0,v0,0x700
+    1224:	24030101 	li	v1,257
+    1228:	ac430000 	sw	v1,0(v0)
+    122c:	3c021f80 	lui	v0,0x1f80
+    1230:	34420704 	ori	v0,v0,0x704
+    1234:	24030004 	li	v1,4
+    1238:	ac430000 	sw	v1,0(v0)
+    123c:	3c020100 	lui	v0,0x100
+    1240:	ac40010c 	sw	zero,268(v0)
+    1244:	8fc20010 	lw	v0,16(s8)
+    1248:	00000000 	nop
+    124c:	24420001 	addiu	v0,v0,1
+    1250:	afc20010 	sw	v0,16(s8)
+    1254:	3c020100 	lui	v0,0x100
+    1258:	8c42010c 	lw	v0,268(v0)
+    125c:	00000000 	nop
+    1260:	28420006 	slti	v0,v0,6
+    1264:	14400031 	bnez	v0,0x132c
+    1268:	00000000 	nop
+    126c:	8fc20014 	lw	v0,20(s8)
+    1270:	00000000 	nop
+    1274:	00402021 	move	a0,v0
+    1278:	0c000406 	jal	0x1018
+    127c:	00000000 	nop
+    1280:	afc20024 	sw	v0,36(s8)
+    1284:	3c020100 	lui	v0,0x100
+    1288:	8c420108 	lw	v0,264(v0)
+    128c:	00000000 	nop
+    1290:	24430001 	addiu	v1,v0,1
+    1294:	3c020100 	lui	v0,0x100
+    1298:	ac430108 	sw	v1,264(v0)
+    129c:	8fc20024 	lw	v0,36(s8)
+    12a0:	00000000 	nop
+    12a4:	afc20014 	sw	v0,20(s8)
+    12a8:	240201a0 	li	v0,416
+    12ac:	0040f809 	jalr	v0
+    12b0:	00000000 	nop
+    12b4:	afc2002c 	sw	v0,44(s8)
+    12b8:	8fc2002c 	lw	v0,44(s8)
+    12bc:	00000000 	nop
+    12c0:	1040001a 	beqz	v0,0x132c
+    12c4:	00000000 	nop
+    12c8:	8fc2002c 	lw	v0,44(s8)
+    12cc:	00000000 	nop
+    12d0:	00402021 	move	a0,v0
+    12d4:	0c000386 	jal	0xe18
+    12d8:	00000000 	nop
+    12dc:	00402021 	move	a0,v0
+    12e0:	0c0002fa 	jal	0xbe8
+    12e4:	00000000 	nop
+    12e8:	3c021000 	lui	v0,0x1000
+    12ec:	24441378 	addiu	a0,v0,4984
+    12f0:	0c0002fa 	jal	0xbe8
+    12f4:	00000000 	nop
+    12f8:	3c020100 	lui	v0,0x100
+    12fc:	8c42010c 	lw	v0,268(v0)
+    1300:	00000000 	nop
+    1304:	00402021 	move	a0,v0
+    1308:	0c000386 	jal	0xe18
+    130c:	00000000 	nop
+    1310:	00402021 	move	a0,v0
+    1314:	0c0002fa 	jal	0xbe8
+    1318:	00000000 	nop
+    131c:	3c021000 	lui	v0,0x1000
+    1320:	24441378 	addiu	a0,v0,4984
+    1324:	0c0002fa 	jal	0xbe8
+    1328:	00000000 	nop
+    132c:	1000ffc5 	b	0x1244
+    1330:	00000000 	nop
+    1334:	10000328 	b	0x1fd8
+    1338:	10000334 	b	0x200c
+    133c:	10000340 	b	0x2040
+    1340:	1000034c 	b	0x2074
+    1344:	10000358 	b	0x20a8
+    1348:	10000364 	b	0x20dc
+    134c:	10000370 	b	0x2110
+    1350:	1000037c 	b	0x2144
+    1354:	10000388 	b	0x2178
+    1358:	10000394 	b	0x21ac
+    135c:	100003a0 	b	0x21e0
+    1360:	100003ac 	b	0x2214
+    1364:	100003b8 	b	0x2248
+    1368:	100003c4 	b	0x227c
+    136c:	100003d0 	b	0x22b0
+    1370:	100003dc 	b	0x22e4
+    1374:	00003181 	0x3181
+    1378:	0000000a 	0xa

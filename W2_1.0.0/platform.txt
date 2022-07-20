@@ -10,7 +10,8 @@ version=1.0.0
 # ---------
 build.core.path ={runtime.platform.path}/cores
 build.variant.path ={runtime.platform.path}/variants
-build.assembly_file ={build.variant.path}/entry4romload.s {build.variant.path}/isr.s {build.variant.path}/io.s
+build.assembly_file ={runtime.platform.path}/variants/entry4romload.s 
+# {build.variant.path}/isr.s {build.variant.path}/io.s
 
 # Toolchain binaries
 # ---------
@@ -40,7 +41,7 @@ compiler.c.elf.flags=-EL -eentry -s -N -Ttext 10000000 -Tdata 01000010 -M
 compiler.cpp.flags=-EL -DPRT_UART -msoft-float -march=mips1 -G 0 -c -Wa,-adhls
 
 # Assembler related definitions
-compiler.S.flags=-EL -msoft-float 
+compiler.s.flags=-EL -msoft-float 
 
 # Compile patterns
 # ----------------
@@ -51,8 +52,16 @@ recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} {compile
 ## Compile C++ files
 recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {compiler.support.path} {includes} "{source_file}" -o "{object_file}"
 
-## Compile S files
-recipe.S.o.pattern="{compiler.path}{compiler.S.cmd}" {compiler.S.flags} {includes} "{source_file}" -o "{object_file}"
+## Compile s files
+recipe.s.o.pattern="{compiler.path}{compiler.s.cmd}" {compiler.s.flags} {includes} "{source_file}" -o "{object_file}"
+
+## Compile a files
+
+compiler.ar.cmd=mips-mti-elf-ar
+compiler.ar.flags= rcs
+
+## Create archives
+recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} "{archive_file_path}" "{object_file}"
 
 # Linker patterns
 # ----------------

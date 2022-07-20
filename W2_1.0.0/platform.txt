@@ -66,13 +66,13 @@ recipe.S.o.pattern="{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{obj
 # ----------------
 
 ## Combine gc-sections, archives, and objects
-recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" -EL -o "{build.path}/{build.project_name}.bin" {object_files}  -lm 
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" {compiler.c.elf.flags} -o "{build.path}/{build.project_name}" {object_files}
 
 # Create output files
 # ----------------
 
 ## Create output (bin file)
-recipe.objcopy.bin.pattern="{runtime.platform.path}/{compiler.elf2hex.cmd}" -l "{build.path}/{build.project_name}.bin"
+recipe.objcopy.bin.pattern="{runtime.platform.path}/{compiler.elf2hex.cmd}" -l "{build.path}/{build.project_name}"
 
 ## Compute size
 # ----------------

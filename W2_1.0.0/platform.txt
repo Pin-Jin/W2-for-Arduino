@@ -60,14 +60,14 @@ recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {c
 recipe.s.o.pattern="{compiler.path}{compiler.s.cmd}" {compiler.s.flags} {includes} "{source_file}" -o "{object_file}"
 
 ## Create archives
-archive_file_path={build.path}/{archive_file}
-recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} "{archive_file_path}" "{object_file}"
+# archive_file_path={build.path}/{archive_file}
+# recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} "{archive_file_path}" "{object_file}"
 
 # Linker patterns
 # ----------------
 
 ## Combine gc-sections, archives, and objects
-recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}"  -o "{build.path}/{build.project_name}.bin" {object_files} "{build.path}/{archive_file}" -lm 
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}"  -o "{build.path}/{build.project_name}.bin" {object_files}  -lm 
 
 # Create output files
 # ----------------

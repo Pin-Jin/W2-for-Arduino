@@ -21,6 +21,7 @@ compiler.size.cmd=mips-mti-elf-size
 compiler.S.cmd=mips-mti-elf-as
 compiler.c.elf.cmd = mips-mti-elf-ld
 compiler.ar.cmd=mips-mti-elf-ar
+compiler.elf2hex.cmd=flashconvert
 
 compiler.support.path = -I {runtime.platform.path}/W2 -I {runtime.platform.path}/std -I {runtime.platform.path}/cores
 
@@ -72,7 +73,7 @@ recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" -EL -o "{build.pa
 # ----------------
 
 ## Create output (bin file)
-## recipe.objcopy.bin.pattern="{compiler.path}{compiler.elf2hex.cmd}" {compiler.elf2hex.flags} {compiler.elf2hex.extra_flags}"{build.path}/{build.project_name}.elf" "{build.path}/{build.project_name}.hex"
+recipe.objcopy.bin.pattern="{runtime.platform.path}/{compiler.elf2hex.cmd}" -I "{build.path}/{build.project_name}.bin"
 
 ## Compute size
 # ----------------

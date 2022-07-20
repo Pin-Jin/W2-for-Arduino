@@ -10,8 +10,7 @@ version=1.0.0
 # ---------
 build.core.path ={runtime.platform.path}/core
 build.variant.path ={runtime.platform.path}/variants
-build.assembly_file ={runtime.platform.path}/variants/entry4romload.s 
-# {build.variant.path}/isr.s {build.variant.path}/io.s
+build.assembly_file ={runtime.platform.path}/variants/entry4romload.s {runtime.platform.path}/variants/isr.s {runtime.platform.path}/variants/io.s
 
 # Toolchain binaries
 # ---------
@@ -42,7 +41,7 @@ compiler.c.elf.flags=-EL -eentry -s -N -Ttext 10000000 -Tdata 01000010 -M
 compiler.cpp.flags=-EL -DPRT_UART -msoft-float -march=mips1 -G 0 -c -Wa,-adhls
 
 # Assembler related definitions
-compiler.s.flags=-EL -msoft-float 
+compiler.S.flags=-EL -msoft-float 
 
 # ar 
 compiler.ar.flags= rcs
@@ -56,8 +55,8 @@ recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} {compile
 ## Compile C++ files
 recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {compiler.support.path} {includes} "{source_file}" -o "{object_file}"
 
-## Compile s files
-recipe.s.o.pattern="{compiler.path}{compiler.s.cmd}" {compiler.s.flags} {includes} "{source_file}" -o "{object_file}"
+## Compile S files
+recipe.S.o.pattern="{compiler.path}{compiler.S.cmd}" {compiler.S.flags} {build.assembly_file} -o "{object_file}"
 
 ## Create archives
 # archive_file_path={build.path}/{archive_file}
@@ -78,7 +77,7 @@ recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" -EL -o "{build.pa
 ## Compute size
 # ----------------
 
-recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A --common "{build.path}/{build.project_name}.elf"
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A --common "{build.path}/{build.project_name}.bin"
 recipe.size.regex=^(\.text|\.eh_frame)\s+([0-9]+).*
 # Recipe to show SRAM size used
 recipe.size.regex.data=^(?:\.data|\.VENEER_Code|\.ram_code|\.bss|\.no_init|\Stack)\s+([0-9]+).*

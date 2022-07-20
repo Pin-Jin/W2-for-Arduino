@@ -21,6 +21,7 @@ compiler.cpp.cmd=mips-mti-elf-g++
 compiler.size.cmd=mips-mti-elf-size
 compiler.S.cmd=mips-mti-elf-as
 compiler.c.elf.cmd = mips-mti-elf-ld
+compiler.ar.cmd=mips-mti-elf-ar
 
 compiler.support.path = -I {runtime.platform.path}/W2 -I {runtime.platform.path}/std -I {runtime.platform.path}/core
 
@@ -43,6 +44,9 @@ compiler.cpp.flags=-EL -DPRT_UART -msoft-float -march=mips1 -G 0 -c -Wa,-adhls
 # Assembler related definitions
 compiler.s.flags=-EL -msoft-float 
 
+# ar 
+compiler.ar.flags= rcs
+
 # Compile patterns
 # ----------------
 
@@ -55,12 +59,8 @@ recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {c
 ## Compile s files
 recipe.s.o.pattern="{compiler.path}{compiler.s.cmd}" {compiler.s.flags} {includes} "{source_file}" -o "{object_file}"
 
-## Compile a files
-
-compiler.ar.cmd=mips-mti-elf-ar
-compiler.ar.flags= rcs
-
 ## Create archives
+archive_file_path={build.path}/{archive_file}
 recipe.ar.pattern="{compiler.path}{compiler.ar.cmd}" {compiler.ar.flags} "{archive_file_path}" "{object_file}"
 
 # Linker patterns

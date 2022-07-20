@@ -49,12 +49,6 @@ compiler.ar.flags= rcs
 # Compile patterns
 # ----------------
 
-# recipe.hooks.libraries.prebuild.1.pattern = "{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{object_file}" "{runtime.platform.path}/variants/entry4romload.S" 
-
-#recipe.hooks.libraries.prebuild.2.pattern = "{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{object_file}" "{runtime.platform.path}/variants/io.S"
-
-#recipe.hooks.libraries.prebuild.3.pattern = "{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{object_file}" "{runtime.platform.path}/variants/isr.S"
-
 ## Compile C files
 recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} {compiler.support.path}  -o "{object_file}" "{source_file}"
 
@@ -83,7 +77,7 @@ recipe.objcopy.bin.pattern="{runtime.platform.path}/{compiler.elf2hex.cmd}" -l "
 ## Compute size
 # ----------------
 
-#recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A --common "{build.path}/{build.#project_name}.bin"
-#recipe.size.regex=^(\.text|\.eh_frame)\s+([0-9]+).*
+recipe.size.pattern="{compiler.path}{compiler.size.cmd}" -A --common "{build.path}/{build.project_name}.bin"
+recipe.size.regex=^(\.text|\.eh_frame)\s+([0-9]+).*
 # Recipe to show SRAM size used
-#recipe.size.regex.data=^(?:\.data|\.VENEER_Code|\.ram_code|\.bss|\.no_init|\Stack)\s+([0-9]+).*
+recipe.size.regex.data=^(?:\.data|\.VENEER_Code|\.ram_code|\.bss|\.no_init|\Stack)\s+([0-9]+).*

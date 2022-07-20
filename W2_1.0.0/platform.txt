@@ -22,7 +22,6 @@ compiler.S.cmd=mips-mti-elf-as
 compiler.c.elf.cmd = mips-mti-elf-ld
 compiler.ar.cmd=mips-mti-elf-ar
 compiler.elf2hex.cmd=flashconvert
-
 compiler.support.path = -I {runtime.platform.path}/W2 -I {runtime.platform.path}/std -I {runtime.platform.path}/cores
 
 # Toolchain definitions
@@ -51,13 +50,13 @@ compiler.ar.flags= rcs
 # ----------------
 
 ## Compile C files
-recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} {compiler.support.path} {includes} "{source_file}" -o "{object_file}"
+recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} {compiler.support.path}  -o "{object_file}" "{source_file}"
 
 ## Compile C++ files
-recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {compiler.support.path} {includes} "{source_file}" -o "{object_file}"
+recipe.cpp.o.pattern="{compiler.path}{compiler.cpp.cmd}" {compiler.cpp.flags} {compiler.support.path} -o "{object_file}" "{source_file}" 
 
 ## Compile S files
-recipe.S.o.pattern="{compiler.path}{compiler.S.cmd}" {compiler.S.flags} "{source_file}" -o "{object_file}"
+recipe.S.o.pattern="{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{object_file}" "{source_file}" 
 
 ## Create archives
 # archive_file_path={build.path}/{archive_file}

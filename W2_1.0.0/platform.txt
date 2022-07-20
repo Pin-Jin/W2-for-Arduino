@@ -73,7 +73,7 @@ recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" -EL -o "{build.pa
 # ----------------
 
 ## Create output (bin file)
-recipe.objcopy.bin.pattern="{runtime.platform.path}/{compiler.elf2hex.cmd}" -I "{build.path}/{build.project_name}.bin"
+recipe.objcopy.bin.pattern="{runtime.platform.path}/{compiler.elf2hex.cmd}" -l "{build.path}/{build.project_name}.bin"
 
 ## Compute size
 # ----------------

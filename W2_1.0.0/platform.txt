@@ -67,7 +67,7 @@ recipe.s.o.pattern="{compiler.path}{compiler.s.cmd}" {compiler.s.flags} {include
 # ----------------
 
 ## Combine gc-sections, archives, and objects
-recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}"  -o "{build.path}/{build.project_name}.bin" {object_files}  -lm 
+recipe.c.combine.pattern="{compiler.path}{compiler.c.elf.cmd}" -EL -o "{build.path}/{build.project_name}.bin" {object_files}  -lm 
 
 # Create output files
 # ----------------

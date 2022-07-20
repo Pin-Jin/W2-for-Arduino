@@ -49,11 +49,11 @@ compiler.ar.flags= rcs
 # Compile patterns
 # ----------------
 
-recipe.hooks.libraries.prebuild.1.pattern = "{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{object_file}" "{runtime.platform.path}/variants/entry4romload.S" 
+# recipe.hooks.libraries.prebuild.1.pattern = "{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{object_file}" "{runtime.platform.path}/variants/entry4romload.S" 
 
-recipe.hooks.libraries.prebuild.2.pattern = "{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{object_file}" "{runtime.platform.path}/variants/io.S"
+#recipe.hooks.libraries.prebuild.2.pattern = "{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{object_file}" "{runtime.platform.path}/variants/io.S"
 
-recipe.hooks.libraries.prebuild.3.pattern = "{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{object_file}" "{runtime.platform.path}/variants/isr.S"
+#recipe.hooks.libraries.prebuild.3.pattern = "{compiler.path}{compiler.S.cmd}" {compiler.S.flags} -o "{object_file}" "{runtime.platform.path}/variants/isr.S"
 
 ## Compile C files
 recipe.c.o.pattern="{compiler.path}{compiler.c.cmd}" {compiler.c.flags} {compiler.support.path}  -o "{object_file}" "{source_file}"

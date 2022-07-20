@@ -8,7 +8,7 @@ version=1.0.0
 
 # Build related core definitions
 # ---------
-build.core.path ={runtime.platform.path}/core
+build.core.path ={runtime.platform.path}/cores
 build.variant.path ={runtime.platform.path}/variants
 build.assembly_file ={runtime.platform.path}/variants/entry4romload.s {runtime.platform.path}/variants/isr.s {runtime.platform.path}/variants/io.s
 
@@ -22,7 +22,7 @@ compiler.S.cmd=mips-mti-elf-as
 compiler.c.elf.cmd = mips-mti-elf-ld
 compiler.ar.cmd=mips-mti-elf-ar
 
-compiler.support.path = -I {runtime.platform.path}/W2 -I {runtime.platform.path}/std -I {runtime.platform.path}/core
+compiler.support.path = -I {runtime.platform.path}/W2 -I {runtime.platform.path}/std -I {runtime.platform.path}/cores
 
 # Toolchain definitions
 # ---------

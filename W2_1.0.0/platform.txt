@@ -8,7 +8,7 @@ version=1.0.0
 
 # Build related core definitions
 # ---------
-build.core.path ={runtime.platform.path}/cores
+build.core.path ={runtime.platform.path}/core
 build.variant.path ={runtime.platform.path}/variants
 build.assembly_file ={runtime.platform.path}/variants/entry4romload.s 
 # {build.variant.path}/isr.s {build.variant.path}/io.s

@@ -3,10 +3,10 @@
     {
       "name": "W2",
       "maintainer": "Jin Pin",
-      "websiteURL": "https://www.4399.com",
+      "websiteURL": "https://github.com/Pin-Jin/W2-for-Arduino",
       "email": "",
       "help": {
-        "online": "https://www.4399.com"
+        "online": "https://github.com/Pin-Jin/W2-for-Arduino"
       },
       "platforms": [
         {
@@ -19,7 +19,7 @@
           "checksum": "",
           "size": "",
           "help": {
-            "online": "https://www.4399.com"
+            "online": "https://github.com/Pin-Jin/W2-for-Arduino"
           },
           "boards": [
             {

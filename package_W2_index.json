@@ -2,11 +2,11 @@
   "packages": [
     {
       "name": "W2",
-      "maintainer": "Jin Pin",
-      "websiteURL": "https://github.com/Pin-Jin/W2-for-Arduino",
+      "maintainer": "Camel Micro",
+      "websiteURL": "http://camelmicro.com/",
       "email": "",
       "help": {
-        "online": "https://github.com/Pin-Jin/W2-for-Arduino"
+        "online": "http://camelmicro.com/"
       },
       "platforms": [
         {
